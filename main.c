@@ -3,10 +3,9 @@
 
 int	main()
 {
-	int 	a;
-	int	b;
-
-	a = strncmp("daaaaaa", "daaakaa",5 );
-	printf("%d\n", a);
+	char start[100] = "Geeksfor";
+	memmove(start+5, start, strlen(start)+1);
+	printf("\n%s", start);
+	return (0);
 }
 
