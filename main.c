@@ -3,15 +3,16 @@
 #include <stdlib.h>
 
 int	main()
-{
+	{
 	char *src = calloc(5, 1);
-	char *dest = src + 2;
-	size_t n = 3;
+	char *dest = malloc(10);
+	size_t n = 10;
 	void *ret;
 
 	strcpy(src, "ola");
-	printf("src is %s/n", src);
+	src[4] = 'x';
+	printf("src is %s\n", src);
 	
-	ret = ft_memmove(dest, src, n);
+	ret = ft_memmove(src, src + 2, n);
 	printf("\n%s = dest, %s = src, %s = ret\n",dest, src, (char *) ret);
 }
