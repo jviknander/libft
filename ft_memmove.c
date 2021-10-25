@@ -2,20 +2,58 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
+	unsigned char		*ret;
+	const unsigned char	*s;
+
+	ret = dest;
+	s = src;
+	if (s < dest)
+	{
+		while (n--)
+			dest[n] = s[n];
+	}
+	else
+		ft_memcpy(ret, s, n);
+	return (ret);
+}
+
+/* 
+{
 	void	*ret;
 
 	ret = dest;
-	if (src > dest)
-		while (n-- > 0)
+	if (src < dest)
+		while (n--)
 			*(char *)(dest + n) = *(char *)(src + n);
 	else 
-		while (n-- > 0)
+		while (n--)
 			*(char *)dest++ = *(char *)src++;
 	return (ret);
 }
 
-/*
-(src > dest) src é "maior" que dest, está à esquerda
-(n-- > 0) como src é maior que dest, caso haja overlap, o n "anda para trás"
-(dest + n) significa 
+----------------------------------
+src < dest with overlap
+
+[_____src_____]
+	[___dest____]
+
+src < dest no overlap
+
+[_____src_____]
+			[___dest____]
+
+----------------------------------
+src > dest with overlap -> memcpy
+
+[_____dest_____]
+	[___src____]
+
+
+src > dest no  overlap -> memcpy (dest != src)
+
+[_____dest_____]
+			[___src____]
+	
+(src < dest) src é "maior" que dest, está à esquerda
+(n--) como src é maior que dest, caso haja overlap, o n "anda para trás"
 */

@@ -2,9 +2,12 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	int		i;
 	unsigned char	*k;
-
-
+	int		i;
+	
+	k = s;
+	i = 0;
+	if (i < n)
+		k[i++] = c;
 	return(s);
 }
