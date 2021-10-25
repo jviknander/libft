@@ -7,10 +7,10 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	ret = dest;
 	s = src;
-	if (s < dest)
+	if (s < ret)
 	{
 		while (n--)
-			dest[n] = s[n];
+			ret[n] = s[n];
 	}
 	else
 		ft_memcpy(ret, s, n);

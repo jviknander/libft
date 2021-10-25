@@ -11,3 +11,8 @@ void	*ft_memset(void *s, int c, size_t n)
 		k[i++] = c;
 	return(s);
 }
+
+/*
+[k[i]____] memória a ser preenchida, a partir do inicio 
+*s(c)     n
+*/
