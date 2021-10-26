@@ -21,12 +21,9 @@
 	i = 0;
 	if (str_1[i++] == str_2[i++] || n == 0)
 		return (0);
-	else if (i < n)
-	{
-		while (str_2[i] != str_1[i])
+	while (str_1[i] == str_2[i] && i < n )
 			i++;
-		return (str_2 - str_1);
-	}
+	return (str_2 - str_1);
 }
 
 /*
