@@ -6,7 +6,7 @@
 /*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 10:13:14 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/10/27 11:59:13 by jde-melo         ###   ########.fr       */
+/*   Updated: 2021/10/28 15:21:32 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ char	*ft_strchr(const char	*s, int	c)
 {
 	while (*s)
 	{
-		if (*s == (unsigned char)c)
+		if (*s == ( char)c)
 			return ((char *)s);
 		s++;
 	}
 	if (c == 0)
-		return ((char *)s)
+		return ((char *)s);
 	return (0);
 }
 

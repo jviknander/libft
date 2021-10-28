@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jde-melo <jde-melo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 10:26:07 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/10/27 10:26:09 by jde-melo         ###   ########.fr       */
+/*   Updated: 2021/10/28 20:41:32 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,34 @@
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char		*ret;
-	const unsigned char	*s:
-	size_t			i;
+	const unsigned char	*s;
+	int					i;
 
-	ret = dest;
+	if (!src && !dest)
+		return (0);
 	s = src;
-	if (ret != s)
+	ret = dest;
+	i = 0;
+	while (n-- != 0)
 	{
-		i = 0;
-		while (i < n)
-			ret[i++] = s[i++];
+		ret[i] = s[i];
+		i++;
 	}
-	return (ret)
+	return (dest);
 }
 
 /*
-	ret = dest;
-	if (src < dest)
-		while (n-- > 0)
-			*(char *)dest++ = *(char *)src++;
-	else
-		return (NULL);
-	return (ret);
+
+src < dest sem overlap
+[_____src_____]
+
+					[_____dest_____]
+
+
+src > dest sem overlap
+[_____dest_____]
+
+					[_____src_____]
 
 */
 

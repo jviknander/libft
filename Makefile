@@ -5,7 +5,7 @@ RM	= rm -f
 NAME	= libft.a
 INCLUDE	= libft.h
 
-SRCS	= *.c
+SRCS	=  ft_memcpy.c ft_memmove.c #$(wildcard *.c)
 
 OBJS	= $(SRCS:.c=.o)
 
@@ -16,6 +16,7 @@ BONUS_0	= $(BONUS_S:.c=.o)
 all:		$(NAME)
 	
 $(NAME):	$(OBJS) $(INCLUDE)
+			echo $(OBJS) 
 			ar -rcs $(NAME) $(OBJS)
 			ranlib	$(NAME)
 

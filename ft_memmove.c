@@ -6,7 +6,7 @@
 /*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 18:28:15 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/10/26 18:30:40 by jde-melo         ###   ########.fr       */
+/*   Updated: 2021/10/28 20:44:52 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,10 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	{
 		while (n--)
 			ret[n] = s[n];
+		return (ret);
 	}
 	else
-		ft_memcpy(ret, s, n);
+		ft_memcpy(dest, src, n);
 	return (ret);
 }
 
@@ -52,7 +53,7 @@ src < dest with overlap
 src < dest no overlap
 
 [_____src_____]
-			[___dest____]
+					[___dest____]
 
 ----------------------------------
 src > dest with overlap -> memcpy
@@ -64,7 +65,7 @@ src > dest with overlap -> memcpy
 src > dest no  overlap -> memcpy (dest != src)
 
 [_____dest_____]
-			[___src____]
+					[___src____]
 	
 (src < dest) src é "maior" que dest, está à esquerda
 (n--) como src é maior que dest, caso haja overlap, o n "anda para trás"
