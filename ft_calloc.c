@@ -6,9 +6,9 @@
 /*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 10:25:52 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/10/27 10:25:54 by jde-melo         ###   ########.fr       */
+/*   Updated: 2021/10/29 14:02:48 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
   
-void	 *calloc(size_t nmemb, size_t size)
+void	 *ft_calloc(size_t nmemb, size_t size)

@@ -6,7 +6,7 @@
 /*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 10:25:36 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/10/27 10:25:38 by jde-melo         ###   ########.fr       */
+/*   Updated: 2021/10/29 22:26:55 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,10 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
+	unsigned char	*ret;
 	
+	ret = s;
+	if (ret[n] == c)
+		return (ret);
+	return (0);
 }

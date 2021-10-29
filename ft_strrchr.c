@@ -6,7 +6,7 @@
 /*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 10:28:11 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/10/27 11:57:40 by jde-melo         ###   ########.fr       */
+/*   Updated: 2021/10/29 19:03:24 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,18 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	while (*s)
+	size_t	n;
+	
+	n = ft_strlen(s) + 1;
+	while (n--)
 	{
-		if (*s == (unsigned char)c)
-			return ((char *)s);
-		s--;
+		if (s[n] == c)
+			return ((char *)&s[n]);
 	}
-	if (c == 0)
-		return ((char *)s)
-	return (0)
+	return (0);
 }
+/*
+int main()
+{
+	printf("%s", ft_strrchr("cico", 'c'));
+}*/

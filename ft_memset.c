@@ -6,7 +6,7 @@
 /*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 14:32:56 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/10/26 14:34:10 by jde-melo         ###   ########.fr       */
+/*   Updated: 2021/10/29 14:26:30 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ void	*ft_memset(void *s, int c, size_t n)
 	
 	k = s;
 	i = 0;
-	if (i < n)
+	while (i < n)
 		k[i++] = c;
-	return(s);
+	return (s);
 }
 
 /*

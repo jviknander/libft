@@ -6,13 +6,13 @@
 /*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 10:27:14 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/10/27 10:27:15 by jde-melo         ###   ########.fr       */
+/*   Updated: 2021/10/29 18:56:06 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	const char	*o_str = str;
 
