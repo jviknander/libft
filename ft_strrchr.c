@@ -6,7 +6,7 @@
 /*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 10:28:11 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/10/29 19:03:24 by jde-melo         ###   ########.fr       */
+/*   Updated: 2021/10/30 22:09:07 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	size_t	n;
-	
+
 	n = ft_strlen(s) + 1;
 	while (n--)
 	{

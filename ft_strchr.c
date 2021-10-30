@@ -6,17 +6,17 @@
 /*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 10:13:14 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/10/29 22:22:22 by jde-melo         ###   ########.fr       */
+/*   Updated: 2021/10/30 22:12:31 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char	*s, int	c)
+char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
-		if (*s == ( char)c)
+		if (*s == (char )c)
 			return ((char *)s);
 		s++;
 	}
@@ -24,7 +24,6 @@ char	*ft_strchr(const char	*s, int	c)
 		return ((char *)s);
 	return (0);
 }
-
 /*
 *s
 |_______________|

@@ -6,8 +6,23 @@
 /*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 10:26:43 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/10/27 10:26:45 by jde-melo         ###   ########.fr       */
+/*   Updated: 2021/10/30 22:10:32 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strdup(const char *s)
+#include "libft.h"
+
+char	*ft_strdup(const char *s1)
+{
+	char	*m;
+	int		i;
+
+	m = malloc(ft_strlen(s1) + 1);
+	if (!m)
+		return (NULL);
+	i = -1;
+	while (s1[++i])
+		m[i] = s1[i];
+	m[i] = '\0';
+	return (m);
+}

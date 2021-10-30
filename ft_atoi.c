@@ -6,24 +6,60 @@
 /*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 10:23:54 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/10/28 15:50:21 by jde-melo         ###   ########.fr       */
+/*   Updated: 2021/10/30 22:25:20 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_isspace(char c)
 {
-	int	i;
+	if (c == '\t' || c == '\n' || c == '\v'
+		|| c == '\f' || c == '\r' || c == ' ')
+		return (1);
+	return (0);
+}
+
+int	ft_issignal(char c)
+{
+	if (c == '+' || c == '-')
+		return (1);
+	return (0);
+}
+
+int	ft_atoi(const char *str)
+{
 	int	k;
-	int	n;
+	int	s;
+
+	k = 1;
+	while (ft_isspace(*str))
+		str++;
+	if (ft_issignal(*str))
+	{
+		if (*str == '-')
+			k *= -1;
+		str++;
+	}
+	s = 0;
+	while (ft_isdigit(*str))
+	{
+		s = (s * 10) + (*str - 48);
+		str++;
+	}
+	return (s * k);
+}
+/*
+  {
+	int n;
+	int k;
 
 	i = 0;
 	k = 1;
 	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v' || str[i] == '\f' 
 				|| str[i] == '\r' || str [i] == ' ')
 		i++;
-	while (str[i] == '+' || str[i] == '-')
+	if (str[i] == '+' || str[i] == '-')
 	{
 		if (str[i] == '-')
 			k *= -1;
@@ -36,3 +72,4 @@ int	ft_atoi(char *str)
 	}
 	return (n * k);
 }
+*/

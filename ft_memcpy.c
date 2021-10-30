@@ -6,7 +6,7 @@
 /*   By: jde-melo <jde-melo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 10:26:07 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/10/28 20:47:48 by jde-melo         ###   ########.fr       */
+/*   Updated: 2021/10/30 22:16:31 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
 /*
 
 src < dest sem overlap
@@ -45,4 +44,3 @@ src > dest sem overlap
 					[_____src_____]
 
 */
-
