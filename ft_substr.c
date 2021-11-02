@@ -6,7 +6,7 @@
 /*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 23:08:36 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/10/31 18:15:33 by jde-melo         ###   ########.fr       */
+/*   Updated: 2021/11/02 13:28:32 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
-	int	size;
+	int		size;
 	int 	i;
 
 	if (s)
@@ -24,7 +24,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 			size = ft_strlen(s);
 		else
 			size = len;
-		sub = ft_calloc(len + 1);
+		sub = ft_calloc((len + 1), size);
 		i = 0;
 		if (s[start])
 		{
