@@ -20,48 +20,23 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (s)
 	{
-		if (start < ft_strlen(s) + 1)
-		{
-			sub = ft_calloc(len + 1);
-			i = 0;
-			while (s[start])
-				sub[i] = s[start];
-			len = '\0';
-		}
-
-		
-		
-		
-		
-		
-		
-		if (len >= ft_strlen(s))
+		if (ft_strlen(s) <= len)
 			size = ft_strlen(s);
 		else
 			size = len;
-
-		return (sub)
-
-
-
-
-
-
-
-
-	if (size > ft_strlen(s))
-	{
-		sub = ft_calloc(size);
-		if (!sub)
+		sub = ft_calloc(len + 1);
+		i = 0;
+		if (s[start])
+		{
+			while (i < len)
+				sub[i++] = s[start++];
+			sub[i] = '\0';
+		}
+		else
 			return (0);
 	}
-	else (size <=)
-
-
-
 	return (sub);
-}i
-
+}	
 /*
 size > ft_strlen(s)
    [___s___]
@@ -95,11 +70,4 @@ if (start < ft_strlen(s) - 1)
  		 |----------------|s
 		 sub size = (max) len
  
-	
-
-
-
-
-
-
-
+*/

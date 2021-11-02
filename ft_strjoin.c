@@ -14,5 +14,6 @@
 
 char *ft_strjoin(char const *s1, char const *s2)
 {
-
+	ft_strlcat
+	return (news)
 }
