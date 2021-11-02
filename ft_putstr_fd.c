@@ -6,7 +6,7 @@
 /*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 23:19:02 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/11/02 13:28:54 by jde-melo         ###   ########.fr       */
+/*   Updated: 2021/11/02 21:19:31 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,9 @@
 
 void ft_putstr_fd(char *s, int fd)
 {
-	int	i;
-
+	int 	i;
+	
 	i = 0;
 	while (s[i])
-		ft_putchar_fd(s[i], fd);
-	i++;
+		ft_putchar_fd(s[i++], fd);
 }
-
-/* test this one too
-
-void ft_putstr_fd(char *s, int fd)
-{
-	while (s)
-		ft_putchar_fd(s, fd);
-}
-*/
