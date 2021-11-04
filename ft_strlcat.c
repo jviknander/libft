@@ -6,7 +6,7 @@
 /*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 10:26:55 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/10/30 22:18:34 by jde-melo         ###   ########.fr       */
+/*   Updated: 2021/11/04 03:21:05 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,16 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	return (len_src + len_dst);
 }
 
+int main(void)
+{
+	int size;
+	char *str;
+	
+	str = malloc(100);
+	size = ft_strlcat(str, "asdasdasd", 10);
+	size = ft_strlcat(str, "bdfbdfbdf", 20);
+	printf("%s\n", str);
+}
 	/*
 	i = 0;
 	if (!dest[i++])

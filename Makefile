@@ -34,7 +34,8 @@ SRCS	=	ft_memcpy.c	\
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
 			ft_putnbr_fd.c \
-			#$(wildcard *.c)
+			ft_strjoin.c \
+			ft_strtrim.c
 
 
 OBJS	= $(SRCS:.c=.o)
