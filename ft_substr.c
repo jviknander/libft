@@ -6,7 +6,7 @@
 /*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 23:08:36 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/11/02 22:22:02 by jde-melo         ###   ########.fr       */
+/*   Updated: 2021/11/05 21:37:16 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
 	int		size;
-	int 	i;
+	int		i;
 
 	if (s)
 	{
@@ -30,31 +30,35 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		if (!sub)
 			return (NULL);
 		i = 0;
+		while (i < size)
+			sub[i++] = s[start++];
+		sub[i] = '\0';
+	}
+	return (sub);
+}
+/*
 		if (s[start])
 		{
 			while (i < size)
 				sub[i++] = s[start++];
 			sub[i] = '\0';
-		}
 		else
 			return (0);
-	}
-	return (sub);
-}
+
+-----------------
 
 
 
-
-
-
-/*
 size > ft_strlen(s)
    [___s___]
    		[___sub___] 
 		start-->len
 
 
-sub = substring will allocate the memmory(size) and if it exits it will fill it with '/0', so the 's' can be returned. if sub does not exist, return 0.
+sub = substring will allocate the memmory(size) 
+and if it exits it will fill it with '/0', so 
+the 's' can be returned. if sub does not exist, 
+return 0.
 
 
 

@@ -6,7 +6,7 @@
 /*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 10:26:55 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/11/04 03:21:05 by jde-melo         ###   ########.fr       */
+/*   Updated: 2021/11/05 21:39:50 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[len_dst + i] = '\0';
 	return (len_src + len_dst);
 }
-
+/*
 int main(void)
 {
 	int size;
@@ -44,7 +44,7 @@ int main(void)
 	size = ft_strlcat(str, "bdfbdfbdf", 20);
 	printf("%s\n", str);
 }
-	/*
+
 	i = 0;
 	if (!dest[i++])
 		return (0);

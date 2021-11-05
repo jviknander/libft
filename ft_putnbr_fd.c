@@ -6,7 +6,7 @@
 /*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 23:20:56 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/11/02 23:25:00 by jde-melo         ###   ########.fr       */
+/*   Updated: 2021/11/05 21:44:55 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putnbr_fd(int n, int fd)
 	if (n < 0)
 	{
 		if (n == -2147483648)
-			write(fd, "-2147483648", 11);	
+			write(fd, "-2147483648", 11);
 		else
 		{
 			ft_putchar_fd('-', fd);
@@ -34,5 +34,5 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd(digit, fd);
 	}
 	else
-			ft_putchar_fd('0', fd);
+		ft_putchar_fd('0', fd);
 }

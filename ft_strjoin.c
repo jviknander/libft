@@ -6,18 +6,18 @@
 /*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 23:12:46 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/11/04 20:30:35 by jde-melo         ###   ########.fr       */
+/*   Updated: 2021/11/05 21:40:34 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
 	int		size;
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 
 	if (!s1 || !s2)
 		return (NULL);
@@ -35,7 +35,6 @@ char *ft_strjoin(char const *s1, char const *s2)
 	str[i] = '\0';
 	return (str);
 }
-
 /*
 char *ft_strjoin(char const *s1, char const *s2)
 {
