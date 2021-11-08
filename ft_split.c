@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_spilt.c                                         :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/30 23:15:05 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/11/07 17:48:49 by jde-melo         ###   ########.fr       */
+/*   Created: 2021/11/08 06:09:24 by jde-melo          #+#    #+#             */
+/*   Updated: 2021/11/08 06:11:42 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_delimiter_counter(char s, char c)
+char	delimiter_counter(const char *s, char c)
 {
-	int *count;
+	int count;
 	int	i;
 
 	i = 0;
 	count = 0;
-	while (s[i])
+	while (s[i] != '\0')
 	{ 
-		while (s[i] != c)
+		while (s[i] == c && s[i])
+		{
 			i++;
-		while (s[i] == c)
+		}
+		while (s[i] != c && s[i])
+		{
 			i++;
-		if (s[i] == '\0')
-			return (0);
+		}
 		count++;
 	}
 	return (count);
@@ -34,18 +36,44 @@ char	ft_delimiter_counter(char s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	char	*matriz;
-	int		i;
+	char	**jarsenio;
+	int		j;
 	int		end;
+	int		start;
 
 	if (!s || !c)
 		return (0);
-	matriz = malloc((ft_delimiter_counter(s, c) + 1);
-	if (!matriz)
+	jarsenio = malloc(sizeof(char *) * delimiter_counter(s, c) + 1);
+	if (!jarsenio)
 		return (0);
-	i = 0;
-	while (s[i])
+	start = 0;
+	end = 0;
+	j = 0;
+	while (s[end])
 	{
+		while (s[end] == c && s[end])
+			end++;
+		start = end;
+		while (s[end] != c && s[end])
+			end++;
+		jarsenio[j++] = ft_substr(s, start, end - start);
 	}
-	return (ft_substr(s, i, end - i));
+	jarsenio[j] = NULL;
+	return (jarsenio);
+}
+
+
+//
+//https://www.youtube.com/watch?v=VmgKryu4__k
+
+int main ()
+{
+	char	**s;
+	int		i;
+
+	s = ft_split("split  ||this|for|me|||||!|", '|');
+	i = -1;
+	while (s[++i])
+		printf("%s\n", s[i]);
+	return (0);
 }
