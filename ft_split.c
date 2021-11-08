@@ -6,7 +6,7 @@
 /*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 06:09:24 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/11/08 06:11:42 by jde-melo         ###   ########.fr       */
+/*   Updated: 2021/11/08 06:41:49 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ char	delimiter_counter(const char *s, char c)
 		{
 			i++;
 		}
+		if (s[i] == '\0')
+			break;
 		while (s[i] != c && s[i])
 		{
 			i++;
@@ -41,7 +43,7 @@ char	**ft_split(char const *s, char c)
 	int		end;
 	int		start;
 
-	if (!s || !c)
+	if (!s)
 		return (0);
 	jarsenio = malloc(sizeof(char *) * delimiter_counter(s, c) + 1);
 	if (!jarsenio)
@@ -56,14 +58,15 @@ char	**ft_split(char const *s, char c)
 		start = end;
 		while (s[end] != c && s[end])
 			end++;
-		jarsenio[j++] = ft_substr(s, start, end - start);
+		if (end > start)
+			jarsenio[j++] = ft_substr(s, start, end - start);
 	}
 	jarsenio[j] = NULL;
 	return (jarsenio);
 }
 
 
-//
+/*
 //https://www.youtube.com/watch?v=VmgKryu4__k
 
 int main ()
@@ -77,3 +80,4 @@ int main ()
 		printf("%s\n", s[i]);
 	return (0);
 }
+*/
