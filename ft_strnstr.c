@@ -6,7 +6,7 @@
 /*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 10:27:34 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/11/14 18:50:32 by jde-melo         ###   ########.fr       */
+/*   Updated: 2021/11/15 11:12:33 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	while (str[i] && i < len)
 	{
 		j = 0;
-		while ((i + j) < len  && str[i + j] == to_find[j])
+		while ((i + j) < len && str[i + j] == to_find[j])
 		{
 			if (to_find[j + 1] == '\0')
 				return ((char *)&str[i]);

@@ -6,27 +6,27 @@
 /*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 06:09:24 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/11/08 06:41:49 by jde-melo         ###   ########.fr       */
+/*   Updated: 2021/11/15 13:07:03 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	delimiter_counter(const char *s, char c)
+static char	delimiter_counter(const char *s, char c)
 {
-	int count;
+	int	count;
 	int	i;
 
 	i = 0;
 	count = 0;
 	while (s[i] != '\0')
-	{ 
+	{
 		while (s[i] == c && s[i])
 		{
 			i++;
 		}
 		if (s[i] == '\0')
-			break;
+			break ;
 		while (s[i] != c && s[i])
 		{
 			i++;
@@ -64,8 +64,6 @@ char	**ft_split(char const *s, char c)
 	jarsenio[j] = NULL;
 	return (jarsenio);
 }
-
-
 /*
 //https://www.youtube.com/watch?v=VmgKryu4__k
 

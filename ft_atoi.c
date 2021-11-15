@@ -6,13 +6,13 @@
 /*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 10:23:54 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/10/30 22:25:20 by jde-melo         ###   ########.fr       */
+/*   Updated: 2021/11/15 13:08:13 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isspace(char c)
+static int	ft_isspace(char c)
 {
 	if (c == '\t' || c == '\n' || c == '\v'
 		|| c == '\f' || c == '\r' || c == ' ')
@@ -20,7 +20,7 @@ int	ft_isspace(char c)
 	return (0);
 }
 
-int	ft_issignal(char c)
+static int	ft_issignal(char c)
 {
 	if (c == '+' || c == '-')
 		return (1);
