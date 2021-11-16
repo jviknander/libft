@@ -6,7 +6,7 @@
 /*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 21:33:31 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/11/15 13:33:52 by jde-melo         ###   ########.fr       */
+/*   Updated: 2021/11/16 14:39:19 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ typedef struct s_list
 int		ft_atoi(const char *str);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-int		ft_strlen(const char *str);
+size_t	ft_strlen(const char *s);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_isalnum(int c);
 int		ft_isprint(int c);

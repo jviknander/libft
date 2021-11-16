@@ -6,7 +6,7 @@
 /*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/27 10:27:24 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/11/15 11:10:41 by jde-melo         ###   ########.fr       */
+/*   Updated: 2021/11/16 14:43:12 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned char	*str_1;
 	unsigned char	*str_2;
-	int				i;
+	size_t			i;
 
 	if (!s1 || !s2 || n == 0)
 		return (0);

@@ -6,7 +6,7 @@
 /*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/30 23:08:36 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/11/15 13:24:36 by jde-melo         ###   ########.fr       */
+/*   Updated: 2021/11/16 14:52:32 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*sub;
-	int		size;
-	int		i;
+	char			*sub;
+	size_t			size;
+	size_t			i;
 
+	sub = NULL;
 	if (s)
 	{
 		if (ft_strlen(s) <= len)

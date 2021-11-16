@@ -6,7 +6,7 @@
 /*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 14:32:56 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/10/30 22:17:22 by jde-melo         ###   ########.fr       */
+/*   Updated: 2021/11/16 14:42:23 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*k;
-	int				i;
+	size_t			i;
 
 	k = s;
 	i = 0;
