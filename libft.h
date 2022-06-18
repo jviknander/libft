@@ -6,7 +6,7 @@
 /*   By: jde-melo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 21:33:31 by jde-melo          #+#    #+#             */
-/*   Updated: 2021/11/16 14:39:19 by jde-melo         ###   ########.fr       */
+/*   Updated: 2022/06/18 01:42:30 by jde-melo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void*));
 t_list	*ft_lstnew(void *content);
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+long	ft_atol(char *str);
+int		ft_strcmp(const char *s1, const char *s2);
 
 #endif
